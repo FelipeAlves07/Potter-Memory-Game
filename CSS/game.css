@@ -1,0 +1,79 @@
+body {
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: url(../Imagens/129-1297387_harry-potter-images-hd.jpg);
+  background-size: cover;
+  font-size: 20px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  margin: 0 0 15px;
+  border-radius: 5px;
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 100px;
+  height: 130px;
+  border-radius: 12px;
+  position: relative;
+  transition: all 400ms ease;
+  transform-style: preserve-3d;
+  background-color: #ccc;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #95fafdcf;
+  border-radius: 12px;
+  transition: all 1000ms ease;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+.back {
+  background-image: url('../Imagens/8a01352f43d7e6eda02604eb25b423d6--hangover-wallpapers.jpg');
+  backface-visibility: hidden;
+}
+
+.reveal-card {
+  transform: rotateY(180deg);
+}
+
+.disabled-card {
+  filter: saturate(0);
+  opacity: 0.5;
+}
+
+
